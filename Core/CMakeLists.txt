@@ -7,12 +7,15 @@ project(libcofusion)
 
 message("Evaluating Core/CMAKE")
 
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}")
+set(CMAKE_MODULE_PATH "${CMAKE_MODULE_PATH};${CMAKE_CURRENT_SOURCE_DIR}")
+set(CMAKE_PREFIX_PATH "${OpenCV_DIR};${CMAKE_PREFIX_PATH}")
+message(STATUS "CMake Module Path " ${CMAKE_MODULE_PATH})
+message(STATUS "CMake Prefix Path " ${CMAKE_PREFIX_PATH})
 
 ## External packages
 find_package(CUDA REQUIRED)
 find_package(SuiteSparse REQUIRED)
-find_package(OpenCV 3.1 REQUIRED)
+find_package(OpenCV 3.1 REQUIRED CONFIG)
 find_package(OpenMP)
 
 if(PCL_FOUND)

@@ -211,7 +211,6 @@ cd build
 cmake \
   -DOpenCV_DIR="${OpenCV_DIR}" \
   -DCMAKE_BUILD_TYPE=Release \
-  -DCUDA_HOST_COMPILER=/usr/bin/gcc-4.9 \
   -DCMAKE_CXX_FLAGS="${CMAKE_CXX_FLAGS} -D_FORCE_INLINES" \
   ..
 make -j8

@@ -10,7 +10,6 @@ cmake_policy(SET CMP0009 NEW)
 
 project(CoFusion)
 
-set(CUDA_HOST_COMPILER "/usr/bin/g++-4.9")
 set(BUILD_TESTS OFF CACHE BOOL "Build unit tests")
 
 # OpenMP
